@@ -1,4 +1,51 @@
-<div>
-  <h1 class="font-bold text-4xl">Brag#index</h1>
-  <p>Find me in app/views/brag/index.html.erb</p>
+<div class="max-w-6xl mx-auto p-6">
+
+  <div class="sm:p-8 mb-6 relative">
+    <div class="flex justify-start sm:absolute sm:top-0 sm:left-0">
+      <%= link_to "<- Back to Quests", root_path, 
+        class: "inline-block bg-[#5BA7AE] hover:bg-[#438389] text-white font-semibold px-4 py-2 sm:px-8 sm:py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base",
+        data: { test_id: "back-to-quests-button" } %>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-3xl shadow-lg p-6 sm:p-8">
+    <div class="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 mb-6">
+      <%= image_tag "parn3.jpg", class: "w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 object-cover rounded-2xl shadow-md",  data: { test_id: "profile-brag-image" } %>
+      <div class="text-center lg:text-left flex-1">
+        <h1 class="text-2xl sm:text-3xl font-bold text-[#519da4]" data-test-id="brag-title" >PaRNtITi's Brag Document</h1>
+      </div>
+    </div>
+
+    <div class="border-t-2 border-gray-100 pt-8">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center bg-[#5BA7AE]/20 px-6 py-3 rounded-full" data-test-id="brag-year-goal-header">
+          <span class="text-2xl mr-2">🎯</span>
+          <span class="font-semibold text-lg text-gray-800">เป้าหมายในปี 2025</span>
+        </div>
+      </div>
+      
+      <div class="max-w-3xl mx-auto text-center space-y-6">
+        <div class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-6" data-test-id="goal-learning">
+          <h3 class="font-semibold text-xl text-gray-800 mb-4">การเรียนรู้และพัฒนาตนเอง</h3>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            เรียนรู้วิธีการทำงานของพี่ๆ ใน ODT เพื่อนำไปพัฒนาตนเอง
+          </p>
+        </div>
+
+        <div class="bg-[#5BA7AE]/10 rounded-2xl p-6" data-test-id="goal-web-dev">
+          <h3 class="font-semibold text-xl text-gray-800 mb-4">พัฒนาทักษะ Web Development</h3>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            พัฒนาเว็บไซต์ด้วย Ruby on Rails อย่างน้อย 1 เว็บไซต์
+          </p>
+        </div>
+
+        <div class="bg-emerald-50 rounded-2xl p-6" data-test-id="goal-health">
+          <h3 class="font-semibold text-xl text-gray-800 mb-4">การดูแลสุขภาพ</h3>
+          <p class="text-gray-700 leading-relaxed">
+            อยากออกกำลังกายให้ได้วีคละ 3-4 วัน เป็นประจำ
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
