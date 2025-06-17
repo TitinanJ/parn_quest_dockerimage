@@ -1,18 +1,37 @@
-example_id                              | status | run_time        |
---------------------------------------- | ------ | --------------- |
-./spec/requests/brag_spec.rb[1:1:1]     | passed | 0.07727 seconds |
-./spec/requests/quests_spec.rb[1:1:1]   | passed | 0.12729 seconds |
-./spec/requests/quests_spec.rb[1:2:1]   | passed | 0.01544 seconds |
-./spec/requests/quests_spec.rb[1:3:1]   | passed | 0.00456 seconds |
-./spec/requests/quests_spec.rb[1:4:1]   | passed | 0.01129 seconds |
-./spec/requests/quests_spec.rb[1:5:1:1] | passed | 0.01051 seconds |
-./spec/requests/quests_spec.rb[1:5:1:2] | passed | 0.00614 seconds |
-./spec/requests/quests_spec.rb[1:5:2:1] | passed | 0.01188 seconds |
-./spec/requests/quests_spec.rb[1:6:1]   | passed | 0.0132 seconds  |
-./spec/requests/quests_spec.rb[1:6:2]   | passed | 0.01147 seconds |
-./spec/requests/quests_spec.rb[1:7:1:1] | passed | 0.01289 seconds |
-./spec/requests/quests_spec.rb[1:7:1:2] | passed | 0.0114 seconds  |
-./spec/requests/quests_spec.rb[1:7:2:1] | passed | 0.01301 seconds |
-./spec/requests/quests_spec.rb[1:7:2:2] | passed | 0.01065 seconds |
-./spec/requests/quests_spec.rb[1:8:1]   | passed | 0.01178 seconds |
-./spec/requests/quests_spec.rb[1:8:2]   | passed | 0.00957 seconds |
+example_id                                              | status  | run_time        |
+------------------------------------------------------- | ------- | --------------- |
+./spec/helpers/brag_helper_spec.rb[1:1]                 | pending | 0.00001 seconds |
+./spec/helpers/quests_helper_spec.rb[1:1]               | pending | 0 seconds       |
+./spec/models/quest_spec.rb[1:1:1]                      | passed  | 0.00172 seconds |
+./spec/models/quest_spec.rb[1:2:1]                      | passed  | 0.00182 seconds |
+./spec/models/quest_spec.rb[1:2:2]                      | passed  | 0.00335 seconds |
+./spec/models/quest_spec.rb[1:2:3]                      | passed  | 0.02253 seconds |
+./spec/requests/brag_spec.rb[1:1:1]                     | passed  | 0.00741 seconds |
+./spec/requests/quests_spec.rb[1:1:1]                   | passed  | 0.0177 seconds  |
+./spec/requests/quests_spec.rb[1:2:1]                   | passed  | 0.01085 seconds |
+./spec/requests/quests_spec.rb[1:3:1]                   | passed  | 0.00706 seconds |
+./spec/requests/quests_spec.rb[1:4:1]                   | passed  | 0.0091 seconds  |
+./spec/requests/quests_spec.rb[1:5:1:1]                 | passed  | 0.01064 seconds |
+./spec/requests/quests_spec.rb[1:5:1:2]                 | passed  | 0.00771 seconds |
+./spec/requests/quests_spec.rb[1:5:2:1]                 | passed  | 0.00566 seconds |
+./spec/requests/quests_spec.rb[1:6:1]                   | passed  | 0.01051 seconds |
+./spec/requests/quests_spec.rb[1:6:2]                   | passed  | 0.00875 seconds |
+./spec/requests/quests_spec.rb[1:7:1:1]                 | passed  | 0.01213 seconds |
+./spec/requests/quests_spec.rb[1:7:1:2]                 | passed  | 0.03002 seconds |
+./spec/requests/quests_spec.rb[1:7:2:1]                 | passed  | 0.0107 seconds  |
+./spec/requests/quests_spec.rb[1:7:2:2]                 | passed  | 0.01924 seconds |
+./spec/requests/quests_spec.rb[1:8:1]                   | passed  | 0.01011 seconds |
+./spec/requests/quests_spec.rb[1:8:2]                   | passed  | 0.00873 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:1]            | passed  | 0.00176 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:2]            | passed  | 0.01409 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:3]            | passed  | 0.00194 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:4]            | passed  | 0.00196 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:5]            | passed  | 0.00167 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:6]            | passed  | 0.00159 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:7]            | passed  | 0.00198 seconds |
+./spec/routing/quests_routing_spec.rb[1:1:8]            | passed  | 0.01446 seconds |
+./spec/views/brag/index.html.tailwindcss_spec.rb[1:1]   | pending | 0 seconds       |
+./spec/views/quests/edit.html.tailwindcss_spec.rb[1:1]  | passed  | 0.00738 seconds |
+./spec/views/quests/index.html.tailwindcss_spec.rb[1:1] | passed  | 0.0226 seconds  |
+./spec/views/quests/new.html.tailwindcss_spec.rb[1:1]   | passed  | 0.00737 seconds |
+./spec/views/quests/show.html.tailwindcss_spec.rb[1:1]  | passed  | 0.01766 seconds |
