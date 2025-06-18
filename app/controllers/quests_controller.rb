@@ -51,10 +51,18 @@ class QuestsController < ApplicationController
     end
   end
 
-  def toggle_complete
-    @quest.update(status: !@quest.status)
-    redirect_to root_path
+def toggle_complete
+  @quest.update(status: !@quest.status)
+
+  respond_to do |format|
+    format.turbo_stream do
+      render turbo_stream: turbo_stream.replace("quest_#{@quest.id}", partial: "quests/quest", locals: { quest: @quest })
+    end
+
+    format.html { redirect_to root_path }
   end
+end
+
 
   private
 

@@ -1,10 +1,24 @@
-<div id="<%= dom_id quest %>" class="w-full sm:w-auto my-5 space-y-5">
-  <div>
-    <strong class="block font-medium mb-1">Name:</strong>
-    <%= quest.name %>
+<turbo-frame id="quest_<%= quest.id %>">
+  <div class="p-6 flex items-center justify-between hover:bg-gray-50 transition-all duration-300">
+    <div class="flex items-center space-x-4 flex-1">
+      <%= form_with(url: toggle_complete_quest_path(quest), method: :patch, remote: true, class: "inline", data: { turbo_frame: "quest_#{quest.id}" }) do |form| %>
+        <input type="checkbox" 
+              <%= 'checked' if quest.status %>
+              onchange="this.form.requestSubmit()"
+              class="h-6 w-6 text-blue-600 rounded-lg border-2 border-gray-300 focus:ring-blue-500 focus:ring-2 transition-all duration-200"
+              data-test-id="quest-checkbox-<%= quest.id %>">
+      <% end %>
+
+      <span class="<%= 'line-through text-gray-400' if quest.status %> <%= 'text-gray-800' unless quest.status %> text-xl font-medium" data-test-id="quest-name-<%= quest.id %>">
+        <%= quest.name %>
+      </span>
+    </div>
+
+    <div class="flex items-center">
+      <%= link_to "Delete", quest_path(quest), 
+          method: :delete,
+          data: { confirm: "Are you sure you want to delete this quest?", test_id: "delete-quest-#{quest.id}" },
+          class: "bg-[#6d554a] hover:bg-[#463730] text-white font-medium px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg" %>
+    </div>
   </div>
-  <div>
-    <strong class="block font-medium mb-1">Status:</strong>
-    <%= quest.status? ? "Yes" : "No" %>
-  </div>
-</div>
+</turbo-frame>
